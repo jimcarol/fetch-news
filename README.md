@@ -11,5 +11,5 @@ gem install fetch_news
   FetchNews.init("static") # 必填，抓取的页面是动态还是静态页面  options: static/dynamic 
 ```
 ## examples
-https://github.com/jimcarol/fetch-news/examples
+https://github.com/jimcarol/fetch-news/tree/master/examples
 
