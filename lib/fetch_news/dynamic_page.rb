@@ -5,7 +5,7 @@ module FetchNews
     attr_reader :browser
 
     def initialize
-      @browser = Watir::Browser.new FetchNews.configuration.browser.to_sym, headless: FetchNews.configuration.headless
+      @browser = Watir::Browser.new FetchNews.configuration.browser.to_sym, headless: FetchNews.configuration.headless, options: { args: ["--no-sandbox"]}
     end
 
     def go url

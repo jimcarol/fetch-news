@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'fetch_news'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2019-06-11'
   s.summary     = "fetch page content from page!"
   s.description = "A simple spider gem"
