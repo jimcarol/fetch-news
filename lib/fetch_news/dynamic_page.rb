@@ -5,7 +5,9 @@ module FetchNews
     attr_reader :browser
 
     def initialize
-      @browser = Watir::Browser.new FetchNews.configuration.browser.to_sym, headless: FetchNews.configuration.headless, options: { args: ["--no-sandbox"]}
+      client = Selenium::WebDriver::Remote::Http::Default.new
+      client.open_timeout = 180 # seconds – default is 60
+      @browser = Watir::Browser.new FetchNews.configuration.browser.to_sym, headless: FetchNews.configuration.headless, http_client: client, options: { args: ["--no-sandbox"]}
     end
 
     def go url
